@@ -1,64 +1,46 @@
-<header>
+Basic Movie Recommendation System Based on Content
 
-<!--
-  <<< Author notes: Course header >>>
-  Include a 1280×640 image, course title in sentence case, and a concise description in emphasis.
-  In your repository settings: enable template repository, add your 1280×640 social image, auto delete head branches.
-  Add your open source license, GitHub uses MIT license.
--->
 
-# Introduction to GitHub
+Project Tile-
+Basic Content-Based Movie Recommendation System (CLI)
 
-_Get started using GitHub in less than an hour._
 
-</header>
+Project Overview - 
+This project is a CLI application developed in Python meant to illustrate the concept of Content-Based Filtering. The system proposes a movie recommendation based solely on the genre attributes (content) of a selected movie and measures the overlap (similarity) of that movie with every other movie in the static, in-memory database. In response, the output is a scored-ranked title list of suggestions, based on the genre match score.
 
-<!--
-  <<< Author notes: Finish >>>
-  Review what we learned, ask for feedback, provide next steps.
--->
 
-## Finish
+Features- 
+1.	In-Memory Data Storage: All movie data (title and list of genres) is temporarily stored in a Python dictionary for rapid retrieval.
+2.	Scoring Genre Similarity: Each genre is processed as a Python set, employing Python’s efficient set intersection method for counting a number of total matching genre categories between two movies.
+3.	Sorted Recommendations: Recommendations (output) is sorted in descending order by genre match score.
+4.	Initialization Available Movies Display: The dataset of available movies is displayed on startup.
+5.	Robust Error Handling: The user is notified if the specified movie title is not present in the database.
+Technologies/Tools Used
+•	Language: Python 3.x
+•	Tools: Standard Python environment.
+•	Core Data Structures: Python dict for the movie catalog, list as a placeholder for genres, and set as the core data structure.
 
-_Congratulations, you've completed this course and joined the world of developers!_
 
-<img src=https://octodex.github.com/images/collabocats.jpg alt=celebrate width=300 align=right>
+Technological Solutions/Methods Utilized
+•	Programming Language: Python 3.x.
+•	Additional Implementation: Standard Python Environment.
+•	Primary Data Structures: Python dict for the movie catalog, list for genres, and set for similarity calculations.
 
-Here's a recap of your accomplishments:
 
-- You learned about GitHub, repositories, branches, commits, and pull requests.
-- You created a branch, a commit, and a pull request.
-- You merged a pull request.
-- You made your first contribution! :tada:
+Installation and Usage Procedure
+1.	Store Code: Persist the provided code on a file named ME.py.
+2.	Locate Terminal: Utilize the command line or terminal to locate the directory where ME.py is located.
+3.	Execute Code: Run the file with Python's interpreter.
+4.	python ME.py
+5.	Obey Prompt: The script will launch with the movies available. Enter in the question the name of one of the movies displayed (Inception or Titanic, for example) for movie recommendations
 
-### What's next?
 
-If you'd like to make a profile README, use the quickstart instructions below or follow the instructions in the [Managing your profile README](https://docs.github.com/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/managing-your-profile-readme) article.
+Testing Directions- 
+In order to test that the system runs correctly, use the following tests:
+  1.Test Case-	Input Movie	What to Expect
+  2.High Match-	Inception	Two matches in genres (sci-fi, action or thriller). Should recommend Tenet and Interstellar (if they match other the genre).
+  3.Low Match-	The Dark Knight	One match in genres (action or crime). Will recommend excluding Titanic.
+  4.No Match-	Titanic	Recommendations will include Notebook (score 2) and Interstellar (score 1).
+  5.Error Handling-	A movie not in the list (avatar)	Print: "Movie not found in"
 
-1. Make a new public repository with a name that matches your GitHub username.
-2. Create a file named `README.md` in its root. The "root" means not inside any folder in your repository.
-3. Edit the contents of the `README.md` file.
-4. If you created a new branch for your file, open and merge a pull request on your branch.
-5. Lastly, we'd love to hear what you thought of this course [in our discussion board](https://github.com/orgs/skills/discussions/categories/introduction-to-github).
-
-Check out these resources to learn more or get involved:
-
-- Are you a student? Check out the [Student Developer Pack](https://education.github.com/pack).
-- [Take another GitHub Skills course](https://github.com/skills).
-- [Read the GitHub Getting Started docs](https://docs.github.com/en/get-started).
-- To find projects to contribute to, check out [GitHub Explore](https://github.com/explore).
-
-<footer>
-
-<!--
-  <<< Author notes: Footer >>>
-  Add a link to get support, GitHub status page, code of conduct, license link.
--->
-
----
-
-Get help: [Post in our discussion board](https://github.com/orgs/skills/discussions/categories/introduction-to-github) &bull; [Review the GitHub status page](https://www.githubstatus.com/)
-
-&copy; 2024 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
-
-</footer>
+  
